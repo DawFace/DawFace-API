@@ -1,4 +1,4 @@
-package model;
+package com.daw.face.model;
 
 import lombok.Data;
 
