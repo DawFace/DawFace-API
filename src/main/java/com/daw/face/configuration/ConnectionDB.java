@@ -4,16 +4,20 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
 import javax.sql.DataSource;
 
 @Configuration
 public class ConnectionDB {
-    private static final String DB_PASSWORD = System.getenv("PASSWORD");
-    private static final String DB_URL = System.getenv("URL");
-    private static final String DB_USER = System.getenv("USER");
+    private static final String DB_PASSWORD = System.getenv("DB_PASSWORD");
+    private static final String DB_URL = System.getenv("DB_URL");
+    private static final String DB_USER = System.getenv("DB_USER");
 
     @Bean
     public DataSource getDatabase() {
+        System.out.println(DB_URL);
+        System.out.println(DB_USER);
+        System.out.println(DB_PASSWORD);
         return DataSourceBuilder
                 .create()
                 .url(DB_URL)
