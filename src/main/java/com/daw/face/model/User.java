@@ -16,12 +16,12 @@ import lombok.ToString;
 @Entity
 public class User {
     @Id
+    @Column(name = "id_user")
     private String userId;
-
-    @Column(name = "name")
-    private String Name;
-    @Column(name = "firstname")
-    private String FirstName;
+    @Column(name = "last_name")
+    private String lastName;
+    @Column(name = "first_name")
+    private String firstName;
     @Column(name = "email")
     private String email;
     @Column(name = "password")
