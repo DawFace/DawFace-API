@@ -1,0 +1,36 @@
+package com.daw.face.repository.model;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.ToString;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@AllArgsConstructor
+@Data
+@ToString
+@Table(name = "\"user\"")
+@Entity
+public class User {
+    @Id
+    private String userId;
+
+    @Column(name = "last_name")
+    private String Name;
+    @Column(name = "first_name")
+    private String FirstName;
+    @Column(name = "email")
+    private String email;
+    @Column(name = "password")
+    private String password;
+    @Column(name = "picture")
+    private String pictureUrl;
+
+    public User() {
+
+    }
+}
