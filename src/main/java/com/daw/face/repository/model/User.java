@@ -17,6 +17,7 @@ import javax.persistence.Table;
 @Entity
 public class User {
     @Id
+    @Column(name = "id_user")
     private String userId;
 
     @Column(name = "last_name")
