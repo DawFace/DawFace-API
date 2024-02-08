@@ -1,4 +1,4 @@
-package com.daw.face.service.event;
+package com.daw.face.service;
 
 import com.daw.face.repository.UserRepository;
 import com.daw.face.repository.model.User;

@@ -1,7 +1,7 @@
 package com.daw.face.endpoint;
 
 import com.daw.face.repository.model.User;
-import com.daw.face.service.event.UserService;
+import com.daw.face.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
