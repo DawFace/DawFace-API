@@ -1,4 +1,4 @@
-package com.daw.face.endpoint.rest.controller.health;
+package com.daw.face.endpoint;
 
 import com.daw.face.repository.model.User;
 import com.daw.face.service.event.UserService;
@@ -12,12 +12,10 @@ import java.util.List;
 @RequestMapping("/api")
 public class UserController {
     public UserService userService;
-
     public UserController(UserService userService) {
         this.userService = userService;
     }
-
-    @GetMapping("/user")
+    @GetMapping("/users")
     public List<User> findAll(){
         return userService.findAll();
     }
