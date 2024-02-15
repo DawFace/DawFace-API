@@ -38,6 +38,8 @@ public class SecurityConf {
 
         return new InMemoryUserDetailsManager(admin);
     }
+
+
 }
 
 
