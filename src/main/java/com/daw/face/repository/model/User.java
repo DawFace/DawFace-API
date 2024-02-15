@@ -19,11 +19,11 @@ import javax.persistence.Table;
 public class User {
     @Id
     @Column(name = "id_user")
-    private String userId;
+    private Integer userId;
     @Column(name = "last_name")
-    private String Name;
+    private String name;
     @Column(name = "first_name")
-    private String FirstName;
+    private String firstName;
     @Column(name = "email")
     private String email;
     @Column(name = "password")
