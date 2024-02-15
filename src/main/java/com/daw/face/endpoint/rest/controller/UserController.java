@@ -2,9 +2,9 @@ package com.daw.face.endpoint.rest.controller;
 
 import com.daw.face.repository.model.User;
 import com.daw.face.service.UserService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,5 +18,10 @@ public class UserController {
     @GetMapping("/users")
     public List<User> findAll(){
         return userService.findAll();
+    }
+    @PostMapping("/signup")
+    public ResponseEntity<User> createUser(@RequestBody User user) {
+        User savedUser = userService.createUser(user);
+        return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
     }
 }
