@@ -1,4 +1,4 @@
-package com.daw.face.endpoint;
+package com.daw.face.endpoint.rest.controller;
 
 import com.daw.face.repository.model.User;
 import com.daw.face.service.UserService;
